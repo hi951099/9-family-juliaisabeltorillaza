@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f9d8c3, #dcd3f7);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: #4f4fa2;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #4f4fa2;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+.auth-buttons button {
+  margin-left: 10px;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login {
+  background: none;
+  border: 1px solid #ccc;
+}
+
+.signup {
+  background-color: #4f4fa2;
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  background-size: cover;
+  color: #55558a;
+  border-radius: 20px;
+  margin: 40px auto;
+  padding: 60px;
+  width: 90%;
+  max-width: 1100px;
+}
+
+.hero-text {
+  max-width: 45%;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #4f4fa2;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-img img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 0 60px 80px;
+}
+
+.artwork h2, .recent h2 {
+  margin-bottom: 15px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card p {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.view-btn {
+  margin-top: 15px;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: #4f4fa2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.recent ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recent {
+  transform: translateX(-40px);
+}
+
+.recent input {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #e6e9f2;
+  font-size: 14px;
+}
+
+
+.info {
+  margin-top: 80px;
+  padding: 0 60px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 25px; 
+  justify-items: center;
+}
+
+.info-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px; 
+}
+.info-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-image {
+  width: 100%;
+  height: 220px;
+  border-radius: 15px;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto;
+  transition: transform 0.3s ease;
+}
+
+.info-image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1000px) {
+  .info {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .info {
+    grid-template-columns: 1fr; 
+  }
+}
+
+  .hero-text, .hero-img {
+    max-width: 100%;
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+.set-size {
+  width: 350px; 
+  height: 350px;
+  object-fit: fill;
+}
+.albedo-img {
+  position: relative;
+  overflow: hidden;
+}
+.albedo-img .bg-gif {
+  position: absolute;
+  top: 0;
+  left: 0px;      
+  width: 100%;       
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.albedo-img .set-size {
+  position: relative;
+  z-index: 2;
+}
